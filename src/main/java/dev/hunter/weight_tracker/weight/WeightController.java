@@ -22,4 +22,9 @@ public class WeightController {
         weightRepository.create(weight);
     }
 
+    @PutMapping("api/v1/weights/{id}")
+    void updateWeight(@RequestBody Weight weight, @PathVariable Integer id) {
+        weightRepository.update(weight, id);
+    }
+
 }
