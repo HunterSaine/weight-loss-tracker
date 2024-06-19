@@ -1,0 +1,1 @@
+#This is a weight loss tracking application built with Java and the Spring framework.
