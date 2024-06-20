@@ -26,5 +26,9 @@ public class WeightController {
     void updateWeight(@RequestBody Weight weight, @PathVariable Integer id) {
         weightRepository.update(weight, id);
     }
+    @DeleteMapping("/api/v1/delete/{id}")
+    void deleteWeight(@PathVariable Integer id) {
+        weightRepository.delete(id);
+    }
 
 }

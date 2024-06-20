@@ -40,4 +40,11 @@ public class WeightRepository {
             create(weight);
         }
     }
+
+    public void delete(Integer id) {
+        Optional<Weight> existingWeight = findById(id);
+        if (existingWeight.isPresent()) {
+            weights.remove(existingWeight.get());
+        }
+    }
 }
